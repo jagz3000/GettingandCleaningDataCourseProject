@@ -44,5 +44,5 @@ dsd <- mydata %>% group_by(activity) %>% summarise(across(everything(), sd)) %>%
 
 mydata2 <- mydata %>% group_by(activity,subject) %>% summarise(across(everything(), mean),.groups='keep')
 
-write.csv(mydata,"mydata.tidy.csv")
-write.csv(mydata2,"mydata2.tidy.csv")
+write.table(mydata,"mydata.tidy.txt" ,row.name=FALSE)
+write.csv(mydata2,"mydata2.tidy.txt" ,row.name=FALSE)
